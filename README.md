@@ -1,4 +1,4 @@
-# Playlst Maker
+# Playlist Maker
 
 <br />
 <div align="center">
@@ -25,7 +25,7 @@
 </details>
 
 ## About The Project
-playlist-maker is the final project of Start2Impact's Front End Developer path.
+Playlist-maker is the final project of Start2Impact's Front End Developer path.
 
 This application allows you to create multiple playlist and save it in local storage.
 
