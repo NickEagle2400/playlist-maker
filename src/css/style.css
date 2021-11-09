@@ -1,0 +1,227 @@
+:root{
+    --primaryColor: #1BD760;
+    --secondaryColor: #2940AB ;
+    --dark: #000;
+    --light: #fff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--dark);
+}
+
+a{
+    text-decoration: none;
+}
+.button{
+    outline: none;
+    border: 2px solid var(--light);
+    background-color: var(--light);
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.15s;
+}
+.button:hover{
+    outline: none;
+    border: 2px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+    color: var(--light);
+}
+.primary{
+    padding: 10px 30px;
+    background-color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    color: var(--light);
+    font-size: 14px;
+}
+.primary:hover{
+    background-color: var(--light);
+    border: 2px solid var(--light);
+    color: var(--primaryColor);
+}
+
+/***************************/
+/*HEADER*/
+/***************************/
+
+header{
+    position: relative;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark);
+    box-shadow: 0px 2px 10px 4px #00000030;
+    z-index:90;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 150px;
+    width: 30%;
+}
+.logo-img{
+    filter: invert(1);
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+.logo-text{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--light);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav{
+    width: 70%;
+    margin: 0;
+    list-style-type: none;
+    padding: 0px 150px 0px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav li{
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.nav li a{
+    color: var(--light);
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.1;
+}
+.nav li a:hover{
+    color: var(--primaryColor);
+}
+
+.nav li span{
+    padding: 2px 0px;
+    border: 1px solid var(--light);
+    background-color: var(--light);
+}
+
+/***************************/
+/*LOGIN & SIGNIN*/
+/***************************/
+.login, .signin{
+    height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+    background-image: url(../images/bursts.svg);
+    background-size: 165%;
+    background-position: 50% 24%;
+}
+
+.form-container{
+    padding: 50px;
+    background-color: var(--dark);
+    color: var(--light);
+    min-width: 42%;
+}
+
+.login h1, .signin h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.form-container p{
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-container form label, .form-container form input{
+    display: block;
+}
+.form-container form label{
+    margin: 0px 0px 15px;
+}
+.form-container form input{
+    width: 100%;
+    padding: 10px 0px 10px 5px;
+    border: none;
+    border-bottom: 2px solid var(--primaryColor);
+    color: var(--light);
+    background-color: var(--dark);
+    font-size: 16px;
+}
+.form-container form input:focus{
+    outline: none;
+}
+
+.form-container form button{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.form-container form p{
+    color: #ccc;
+    font-size: 14px;
+}
+.form-container a{
+    color: var(--primaryColor);
+    font-size: 16px;
+    margin-left: 10px;
+    transition: all 0.1s;
+}
+.form-container a:hover{
+    color: var(--light);
+}
+
+
+/***************************/
+/*HOMEPAGE*/
+/***************************/
+
+.page-container{
+    background-color: var(--light);
+    min-height: 100vh;
+}
+.homepage h1{
+    margin: 0;
+}
+
+/***************************/
+/*FOOTER*/
+/***************************/
+footer{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    background-color: var(--dark);
+}
+
+footer p{
+    color: var(--light);
+    font-size: 14px;
+}
+
+footer p span{
+    margin: 0px 10px
+}
+footer p a{
+    color: var(--light);
+    font-weight: bold;
+    transition: all 0.1;
+}
+footer p a:hover{
+    color: var(--primaryColor);
+}
