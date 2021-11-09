@@ -1,11 +1,13 @@
 import React from 'react'
 import Container from '../components/container'
+import SearchBar from '../components/searchbar'
+
 
 function Discovery(){
     return(
         <Container>
             <div className="discovery">
-                <h1>discovery</h1>
+                <SearchBar />
             </div>
         </Container>
     )

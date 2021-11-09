@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import Form from '../components/form'
 
 function Login(){
     return(
@@ -7,16 +7,13 @@ function Login(){
             <div className="form-container">
                 <h1>Login</h1>
                 <p>Compila il form qui sotto per effettuare il login al tuo account</p>
-                <form>
-                    <label>
-                        <input type="email" placeholder="Email" />
-                    </label>
-                    <label>
-                        <input type="password" placeholder="Password" />
-                    </label>
-                    <button type="submit" className="button primary">Login</button>
-                    <p>Non hai un account? <NavLink to="/signup">Registrati</NavLink></p>
-                </form>
+                <Form 
+                    cta="Login" 
+                    ctaFallBack="Registrati" 
+                    ctaFallBackLink="/signup" 
+                    fallBackText="Non hai un account?" 
+                    handleSubmit={() => console.log("Submit")}
+                />
             </div>
         </div>
     )

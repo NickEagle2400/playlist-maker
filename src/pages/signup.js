@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import Form from '../components/form'
 
 function SignUp(){
     return(
@@ -7,16 +7,13 @@ function SignUp(){
             <div className="form-container">
                 <h1>Signup</h1>
                 <p>Compila il form qui sotto per creare un nuovo account</p>
-                <form>
-                    <label>
-                        <input type="email" placeholder="Email" />
-                    </label>
-                    <label>
-                        <input type="password" placeholder="Password" />
-                    </label>
-                    <button type="submit" className="button primary">Registrati</button>
-                    <p>Hai già un account? <NavLink to="/login">Login</NavLink></p>
-                </form>
+                <Form 
+                    cta="Registrati" 
+                    ctaFallBack="Login" 
+                    ctaFallBackLink="/login" 
+                    fallBackText="Hai già un account?" 
+                    handleSubmit={() => console.log("Submit")}
+                />
             </div>
         </div>
     )
