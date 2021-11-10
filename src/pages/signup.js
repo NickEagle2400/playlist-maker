@@ -1,7 +1,12 @@
 import React from 'react'
 import Form from '../components/form'
+import { createUserWithEmailAndPassword} from 'firebase/auth'
+import app from '../firebase'
 
-function SignUp(){
+function SignUp() {
+
+    
+
     return(
         <div className="login">
             <div className="form-container">
@@ -12,7 +17,7 @@ function SignUp(){
                     ctaFallBack="Login" 
                     ctaFallBackLink="/login" 
                     fallBackText="Hai già un account?" 
-                    handleSubmit={() => console.log("Submit")}
+                    action="register"
                 />
             </div>
         </div>

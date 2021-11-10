@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Thumbnail from './thumbnail'
-import app from '../firebase'
+import { getAuth } from '@firebase/auth'
 import Logo from '../images/logo.png'
 import { NavLink } from 'react-router-dom'
+import { AuthContext } from '../context/auth'
+
 
 function Header() {
+
+    const {currentUser} = useContext(AuthContext)
+
     return(
         <header>
             <div className="logo-container">
@@ -16,7 +21,8 @@ function Header() {
                 <li><NavLink to="/discovery">Discovery</NavLink></li>
                 <li><NavLink to="/new-music-friday">New Music Friday</NavLink></li>
                 <li><span></span></li>
-                <li><button className="button">Sign Out</button></li>
+                {currentUser ? <li><button className="button" onClick={() => getAuth().signOut()}>Sign Out</button></li> : <><li><NavLink to="/signup">Signup</NavLink></li><li><NavLink to="/login">Login</NavLink></li></>}
+                
             </ul>
         </header>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+import { faPlayCircle, faPauseCircle } from '@fortawesome/free-regular-svg-icons'
 
 function PlayButton({audio, ...props}){
 
@@ -23,10 +23,10 @@ function PlayButton({audio, ...props}){
     }
 
     return(
-        <button onClick={togglePlay}>
+        <span onClick={togglePlay} className="player">
             <audio src={audio} {...props} onEnded={handleEnded}/>
-            {!isPlaying ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
-        </button>
+            {!isPlaying ? <FontAwesomeIcon icon={faPauseCircle} size="lg"/> : <FontAwesomeIcon icon={faPlayCircle} size="lg" />}
+        </span>
     )
     
 }

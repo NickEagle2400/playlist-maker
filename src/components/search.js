@@ -1,13 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Search(){
+
+    const [query, setQuery] = useState("")
+
+    function handleChange(event){
+        event.preventDefault()
+        setQuery(()=>{
+            return event.target.value
+        })
+    }
+
     return(
-        <form>
+        <form className="search">
             <div>
-                <input />
-                <button>Search</button>
+                <input className="search-input" type="text" value={query} placeholder="Search track" onChange={handleChange}/>
+                <button className="search-button">Search</button>
             </div>
-            
         </form>
     )
 }

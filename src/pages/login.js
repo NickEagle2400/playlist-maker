@@ -12,7 +12,7 @@ function Login(){
                     ctaFallBack="Registrati" 
                     ctaFallBackLink="/signup" 
                     fallBackText="Non hai un account?" 
-                    handleSubmit={() => console.log("Submit")}
+                    action="login"
                 />
             </div>
         </div>
