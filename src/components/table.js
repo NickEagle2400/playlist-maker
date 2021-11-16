@@ -7,7 +7,7 @@ function Table({ list, isMyPlaylist}){
     return(
         <table>
             <tbody>
-                {list.data.playlist.map((item, index)=>{
+                {list.playlist.map((item, index)=>{
                     return(
                         <TableRow
                             key={index}
